@@ -1,0 +1,110 @@
+POST http://localhost:4000/api/getboard HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InkweTAiLCJpYXQiOjE1ODYxMDQ1MDl9.Zk8mVCp8hm1UldBKi79MHaeKgkSbeV5iPZaAwFDFPmc
+
+{
+        "code" : 2
+}
+
+###
+
+
+POST http://localhost:4000/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "user": {"username" : "anushkini1",
+    "password" : "anushkini1"}
+}
+
+####
+
+
+###
+POST http://localhost:4000/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username" : "test",
+    "password" : "test123",
+    "firstname" : "test",
+    "lastname" : "best",
+    "email" : "testbest@gmail.com"
+}
+
+
+
+
+###
+
+
+GET http://localhost:4000/user/userdetails HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlByYWQiLCJpbWciOiI1ZTkwNTg5NDc5NWMyYjdlNzgxZWY0YTEiLCJpYXQiOjE1ODY1MTgxOTYsImV4cCI6MTU4NjUyMTc5Nn0.0mD7P7xS8VHqLdtXdpXMxSTdg8d1kH_CFIlbbbt2mmI
+
+###
+
+GET http://localhost:4000/user/profile/y0y0 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiZWFiaWxpdHkiLCJpbWciOiI1ZTkwYzIyMGZmNjU2ODQ2ODk0NDI3ZDMiLCJpYXQiOjE1ODY1NDUxOTQsImV4cCI6MTU4NjU0ODc5NH0.OmvsXhG2ryOkUBt2nESXHZm42XefaUqcd-G6s5QP7wM
+
+###
+
+GET http://localhost:4000/images/profilepic HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoZWNrIiwiaW1nIjoiNWU5MDg2NDQ5MmRjNGYwZGRlN2RiZjE3IiwiaWF0IjoxNTg2NTI5ODY4LCJleHAiOjE1ODY1MzM0Njh9.Cy4phKKTQHUFWk7pqc_jwBQwtnmF2ZhyM51orfwv6G0
+
+###
+
+POST http://localhost:4000/user/logout HTTP/1.1
+
+###
+
+GET http://localhost:4000/images/logo/5e92c17d49b32d39af35ba8a HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFudXNoIiwiaW1nIjoiNWU4ZjJkZmU2N2UyZDUyMTMwNzE5YzhjIiwiaWF0IjoxNTg2NDU5NDU0LCJleHAiOjE1ODY0NjMwNTR9._rFSwqj1oebEOrKT2k6VqPi0bDQzlX7L_MJBBKJpfbA
+
+
+###
+
+POST http://localhost:4000/user/friendslist HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiZTEyMyIsImlhdCI6MTU4NjcxNDIxNiwiZXhwIjoxNTg2NzE3ODE2fQ.KEP9VgnFZ_DBqGKY7HQu3PgNfnhfXb7msfl7coC6P6Q
+
+Content-Type: application/json
+{
+    "username" : "abe123"
+}
+###
+
+GET http://localhost:4000/user/friendrequests HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoZWNrIiwiaW1nIjoiNWU5MDg2NDQ5MmRjNGYwZGRlN2RiZjE3IiwiaWF0IjoxNTg2NTMxMzA4LCJleHAiOjE1ODY1MzQ5MDh9.hScMOEEvb1geMBl8IV678X7DdfdZqAC-dvbtI8Jh9mk
+
+###
+#this adds the logged in user to friendrequests of the username in the body
+POST http://localhost:4000/user/sendrequest HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoZWNrIiwiaW1nIjoiNWU5MDg2NDQ5MmRjNGYwZGRlN2RiZjE3IiwiaWF0IjoxNTg2NTMxMzA4LCJleHAiOjE1ODY1MzQ5MDh9.hScMOEEvb1geMBl8IV678X7DdfdZqAC-dvbtI8Jh9mk
+Content-Type: application/json
+
+{
+    "username" : "User1"
+}
+
+###
+#after accepting the friend request
+POST http://localhost:4000/user/addfriend HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlVzZXIxIiwiaW1nIjoiNWU5MDhmNDI1ZDEwNGQzYmNlYTc1NDRjIiwiaWF0IjoxNTg2NTM3MTY3LCJleHAiOjE1ODY1NDA3Njd9.u6Z4lu8i2GMpZad1nbx7K9mG1mvY7jCLR3mJjCOB6YE
+Content-Type: application/json
+
+{
+    "username" : "User2"
+}
+
+###
+GET http://localhost:4000/user/allusers HTTP/1.1
+
+
+###
+GET http://localhost:4000/chess.html
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYWR5dW1uYXltIiwiaWF0IjoxNTkwNTc4MzU2LCJleHAiOjE1OTA1ODE5NTZ9.GVnPEnOyqvzep7udeciwA1liB0hRfIy-4Sgio_h8h1s
+
+###
+POST http://localhost:4000/user/register
+Content-Type: multipart/form-data
+
+{"username" : "pradyumnaym", "password" : "123", "firstname" :"p", "lastname" : "ym"}

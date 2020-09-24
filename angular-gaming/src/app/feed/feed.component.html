@@ -1,0 +1,25 @@
+
+<!-- <mat-card class="example-card">
+
+
+    <b><mat-card-title>{{games.name}}</mat-card-title>
+    <mat-card-subtitle> rating :  {{games.rating}}</mat-card-subtitle></b>
+
+  <img mat-card-image src={{games.imgUrl}}>
+
+
+      {{games.desc}}
+
+  <mat-card-actions>
+    <button mat-button><a href={{games.src}}>Play</a></button>
+
+  </mat-card-actions>
+</mat-card> -->
+
+<div class="boxed container">
+  <div style="text-align: center;">
+  <h1 style="color: aliceblue;">{{feed.title}}</h1>
+  </div><div class = "bottomright">{{feed.pubDate}}</div>
+  <div class="topright" style="color: antiquewhite;" [innerHTML]="feed.description"></div>
+
+</div>

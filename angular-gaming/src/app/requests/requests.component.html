@@ -1,0 +1,23 @@
+<div>
+    <div class="mini-header">
+        <div class="mini-div">
+            <span class="mini-text">Friend Requests</span>
+        </div>
+    </div>
+    <div class="container" style="text-align:center;">
+        <h2 *ngIf="hasRequests == false" >You currently have no friend requests</h2>
+        <h2 *ngIf="hasRequests">Friend Requests</h2>
+    </div>
+    <div *ngIf="hasRequests">
+        <div *ngFor="let request of requests;let i = index;">
+            <div class="requestBox" id="request{{i}}">
+                <span id="requestMessage" style="margin-left: 10px;font-size: 20px;">{{request}} wants to be friends with you.</span>
+                <div id="container" >
+                    <button id="button{{i}}" (click)="addFriendRequest(i)" class="btn draw-border" style="padding:4px;">Accept</button>
+                    <button (click)="rejectFriendRequest(i)" class="btn draw-border" style="padding:4px;">Reject</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
